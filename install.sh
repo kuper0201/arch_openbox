@@ -16,4 +16,4 @@ rm -rf yay
 
 systemctl enable greetd
 
-yay -Syu polybar rofi dunst compton
+yay -Syu polybar rofi dunst compton ttf-hack-nerd --needed --noconfirm
