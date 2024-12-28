@@ -13,6 +13,7 @@ rm -rf yay
 
 # greeter setting
 # nano /etc/greetd/config.toml => command = "tuigreet --cmd /bin/bash"
+sed -i 's|command = "agreety --cmd /bin/sh"|command = "tuigreet --cmd /bin/bash"|' /etc/greetd/config.toml
 
 systemctl enable greetd
 
