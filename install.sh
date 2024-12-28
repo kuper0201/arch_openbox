@@ -26,4 +26,6 @@ mv dot_Xresources ~/.Xresources
 mv scripts ~/scripts
 
 mv dot_config ~/.config
-mv .themes ~/.themes
+mv dot_themes ~/.themes
+
+# lxappearance
