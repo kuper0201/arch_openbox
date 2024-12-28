@@ -4,6 +4,9 @@ gaps top 40
 
 font pango:monospace 8
 
+bindsym Mod1+n move scratchpad
+#bindsym Mod1+m scratchpad show; floating disable
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -34,6 +37,7 @@ bindsym Mod1+Shift+q kill
 set $rofi ~/scripts/rofi/launch.sh
 
 # Start rofi with appmenu and tabmenu
+bindsym Mod1+m exec $rofi scratchpad
 bindsym Mod1+space exec $rofi appmenu
 bindsym Mod1+Tab exec $rofi tabmenu
 bindsym Mod1+Shift+e exec $rofi powermenu
@@ -77,7 +81,7 @@ bindsym Mod1+w layout tabbed
 bindsym Mod1+e layout toggle split
 
 # toggle tiling / floating
-bindsym Mod1+Shift+space floating toggle
+bindsym Mod1+t floating toggle
 
 # change focus between tiling / floating windows
 #bindsym Mod1+space focus mode_toggle
