@@ -3,7 +3,7 @@
 # https://yjwang.tistory.com/165
 
 # install something
-pacman -Syu --needed --noconfirm nano git base-devel i3-gaps xorg-server xorg-xinit pcmanfm-gtk3 greetd-tuigreet lxappearance alacritty xdotool
+pacman -Syu --needed --noconfirm nano git base-devel jq i3-gaps xorg-server xorg-xinit pcmanfm-gtk3 greetd-tuigreet lxappearance alacritty xdotool
 
 # install yay
 git clone https://aur.archlinux.org/yay.git
