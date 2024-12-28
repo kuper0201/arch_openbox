@@ -20,9 +20,6 @@ systemctl enable greetd
 yay -Syu polybar rofi dunst compton feh ttf-hack-nerd --needed --noconfirm
 
 # install keybinds and themes
-git clone https://github.com/kuper0201/arch_i3wm
-cd arch_i3wm
-
 mv dot_bashrc ~/.bashrc
 mv dot_xinitrc ~/.xinitrc
 mv dot_Xresources ~/.Xresources
