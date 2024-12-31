@@ -8,8 +8,15 @@ if [ "$EUID" -eq 0 ]; then
 fi
 
 # install something
-sudo pacman -Syu --needed --noconfirm nano git base-devel jq i3-gaps xorg-server xorg-xinit pcmanfm-gtk3 greetd-tuigreet lxappearance alacritty xdotool
-#sudo pacman -Syu --noconfirm lightdm lightdm-gtk-greeter
+sudo pacman -Syu --needed --noconfirm nano git base-devel jq i3-gaps xorg-server xorg-xinit pcmanfm-gtk3 lxappearance alacritty xdotool
+
+# for tui greeter
+sudo pacman -Syu --needed --noconfirm greetd-tuigreet
+sudo sed -i 's|command = "agreety --cmd /bin/sh"|command = "tuigreet --cmd /bin/bash"|' /etc/greetd/config.toml
+sudo systemctl enable greetd
+
+# for gui greeter
+#sudo pacman -Syu --needed --noconfirm lightdm lightdm-gtk-greeter
 #sudo systemctl enable lightdm
 
 # install yay
@@ -17,10 +24,6 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 sudo makepkg -si
 rm -rf yay
-
-# greeter setting
-sudo sed -i 's|command = "agreety --cmd /bin/sh"|command = "tuigreet --cmd /bin/bash"|' /etc/greetd/config.toml
-sudo systemctl enable greetd
 
 # install packages from AUR
 yay -Syu polybar rofi dunst compton feh ttf-hack-nerd --needed --noconfirm
