@@ -11,6 +11,11 @@ fifth = #d2595d
 
 alert = #ed404c
 
+[module/tray]
+type = internal/tray
+
+format-margin = 3px
+tray-spacing = 3px
 
 [bar/main]
 width = 100%:-38
@@ -37,7 +42,7 @@ font-2 = Hack Nerd Font:style=Regular:pixelsize=15:antialias=true;3
 
 modules-left = i3
 modules-center = xwindow
-modules-right = audio wlan battery date powermenu
+modules-right = audio tray wlan battery date powermenu
 
 cursor-click = pointer
 cursor-scroll = ns-resize
