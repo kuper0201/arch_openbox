@@ -1,7 +1,7 @@
 configuration {
     modi: "window,run,drun";
     show-icons: true;
-    font: "Hack Nerd Font 15";
+    font: "Hack Nerd Font 10";
 }
 
 @import "colors.rasi"
@@ -11,15 +11,15 @@ configuration {
 }
 
 #window {
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 140px 250px;
+    padding: 10px 10px;
 }
 
 #mainbox {
     border:  0;
-    border-radius: 22;
+    border-radius: 10;
     padding: 40;
     background-color: @background-solid;
 }
@@ -29,21 +29,16 @@ configuration {
 }
 
 #listview {
-    columns: 5;
-    spacing: 20px;
-    cycle: false;
-    dynamic: true;
-    layout: vertical;
+    lines: 5;
+    columns: 4;
+    spacing: 7px;
+    cycle: true;
     background-color: transparent;
-    // padding: 20px -10px -20px -10px;
-    padding: 30px 0px 0px 0;
 }
 
 element {
-    // margin: 10px 10px 10px 10px;
-    padding: 34px;
-    border-radius: 16px;
-    orientation: vertical;
+    border-radius: 5px;
+    orientation: horizontal;
 }
 
 #element.normal.normal, element.alternate.normal {
@@ -55,7 +50,7 @@ element {
 }
 
 #element-icon {
-    size: 140px;
+    size: 18px;
     background: transparent;
 }
 
@@ -84,7 +79,6 @@ element {
 #mode-switcher {
     border:       0px 0px 0px ;
     border-color: #2dffae;
-//    border-color: @separatorcolor;
 }
 
 #button {
@@ -103,7 +97,6 @@ element {
     margin-bottom: 50px;
     padding: 20px;
     background-image: @selected-background-gradient;
-    // background-color: @selected-background;
     /*rgba(0,0,0,0.5);*/
     border-radius: 18px;
 }
