@@ -13,5 +13,5 @@ elif [ "$menu" = "powermenu" ]; then
 elif [ "$menu" = "tabmenu" ]; then
     ~/scripts/rofi/tabmenu.sh
 elif [ "$menu" = "scratchpad" ]; then
-    rofi -show scratchpad -modi 'scratchpad:~/scripts/rofi/scratchpad.sh' -theme powermenu
+    rofi -show scratchpad -modi 'scratchpad:~/scripts/rofi/scratchpad.sh' -theme clean
 fi
