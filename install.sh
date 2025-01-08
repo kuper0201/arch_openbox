@@ -23,6 +23,7 @@ sudo systemctl enable greetd
 git clone https://aur.archlinux.org/yay.git
 cd yay
 sudo makepkg -si
+cd ..
 rm -rf yay
 
 # install packages from AUR
