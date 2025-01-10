@@ -32,7 +32,7 @@ tiling_drag modifier titlebar
 bindsym Mod1+Return exec alacritty
 
 # kill focused window
-bindsym Mod1+Shift+q kill
+bindsym Mod1+q kill
 
 set $rofi ~/scripts/rofi/launch.sh
 
