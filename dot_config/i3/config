@@ -181,6 +181,9 @@ exec --no-startup-id feh --bg-fill ~/.config/wallpaper/wall_1.png
 exec --no-startup-id nm-applet
 exec --no-startup-id fcitx5 -d
 
+# on laptop / for using gestures / install touchegg and touche
+# exec --no-startup-id touchegg
+
 default_border pixel 2
 
 #border colors
