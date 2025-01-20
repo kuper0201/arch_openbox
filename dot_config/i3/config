@@ -4,7 +4,7 @@ gaps top 40
 
 font pango:monospace 8
 
-set $MOD Mod4
+set $MOD Mod1
 
 # Use pactl to adjust volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
