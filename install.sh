@@ -8,7 +8,7 @@ if [ "$EUID" -eq 0 ]; then
 fi
 
 # install something
-sudo pacman -Syu --needed --noconfirm nano git base-devel jq i3-gaps xorg-server xorg-xinit pcmanfm-gtk3 lxappearance alacritty xdotool kvantum kvantum-theme-materia materia-gtk-theme
+sudo pacman -Syu --needed --noconfirm nano git base-devel jq i3-gaps xorg-server xorg-xinit pcmanfm-gtk3 lxappearance alacritty xdotool kvantum kvantum-theme-materia materia-gtk-theme kvantum-qt5 qt5ct qt6ct
 
 # for tui greeter
 sudo pacman -Syu --needed --noconfirm greetd-tuigreet
@@ -37,6 +37,8 @@ mv scripts ~/scripts
 
 mv dot_config ~/.config
 mv dot_themes ~/.themes
+
+sudo echo "QT_QPA_PLATFORMTHEME=qt5ct\nQT_STYLE_OVERRIDE=kvantum" > /etc/environment
 
 # set gtk3 theme
 # lxappearance
