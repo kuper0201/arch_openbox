@@ -94,7 +94,7 @@ bindsym $MOD+w layout tabbed
 bindsym $MOD+Shift+f layout toggle split
 
 # toggle tiling / floating
-#bindsym $MOD+t floating toggle
+bindsym $MOD+t floating toggle
 bindsym $MOD+e floating toggle
 
 # change focus between tiling / floating windows
@@ -181,9 +181,7 @@ exec --no-startup-id compton --config ~/.config/compton/compton.conf
 exec --no-startup-id feh --bg-fill ~/.config/wallpaper/wall_1.png
 exec --no-startup-id nm-applet
 exec --no-startup-id fcitx5 -d
-
-# on laptop / for using gestures / install touchegg and touche
-# exec --no-startup-id touchegg
+exec --no-startup-id touchegg
 
 default_border pixel 2
 
