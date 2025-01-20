@@ -38,7 +38,7 @@ mv scripts ~/scripts
 mv dot_config ~/.config
 mv dot_themes ~/.themes
 
-sudo echo "QT_QPA_PLATFORMTHEME=qt5ct\nQT_STYLE_OVERRIDE=kvantum" > /etc/environment
+sudo echo "\nQT_QPA_PLATFORMTHEME=qt5ct\nQT_STYLE_OVERRIDE=kvantum" > /etc/environment
 
 # set gtk3 theme
 # lxappearance
