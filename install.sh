@@ -29,6 +29,15 @@ rm -rf yay
 # install packages from AUR
 yay -Syu polybar rofi dunst compton feh ttf-hack-nerd --needed --noconfirm
 
+# backup
+mv ~/.bashrc ~/.bashrc_bak
+mv ~/.xinitrc ~/.xinitrc_bak
+mv ~/.Xresources ~/.Xresources_bak
+mv ~/scripts ~/scripts_bak
+
+mv ~/.config ~/.config_bak
+mv ~/.themes ~/.themes_bak
+
 # install keybinds and themes
 mv dot_bashrc ~/.bashrc
 mv dot_xinitrc ~/.xinitrc
@@ -38,7 +47,7 @@ mv scripts ~/scripts
 mv dot_config ~/.config
 mv dot_themes ~/.themes
 
-sudo echo -e "\nQT_QPA_PLATFORMTHEME=qt5ct\nQT_STYLE_OVERRIDE=kvantum" > /etc/environment
+sudo sed -i "$ s/$/\nQT_QPA_PLATFORMTHEME=qt5ct\nQT_STYLE_OVERRIDE=kvantum/" /etc/environment
 
 # set gtk3 theme
 # lxappearance
