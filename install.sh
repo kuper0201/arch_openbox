@@ -49,5 +49,8 @@ mv dot_themes ~/.themes
 
 sudo sed -i "$ s/$/\nQT_QPA_PLATFORMTHEME=qt5ct\nQT_STYLE_OVERRIDE=kvantum\nGTK_THEME=Materia-dark/" /etc/environment
 
+# for nm-applet
+sudo systemctl enable NetworkManager
+
 # set gtk3 theme
 # lxappearance
