@@ -47,7 +47,7 @@ mv scripts ~/scripts
 mv dot_config ~/.config
 mv dot_themes ~/.themes
 
-sudo sed -i "$ s/$/\nQT_QPA_PLATFORMTHEME=qt5ct\nQT_STYLE_OVERRIDE=kvantum/" /etc/environment
+sudo sed -i "$ s/$/\nQT_QPA_PLATFORMTHEME=qt5ct\nQT_STYLE_OVERRIDE=kvantum\nGTK_THEME=Materia-dark/" /etc/environment
 
 # set gtk3 theme
 # lxappearance
