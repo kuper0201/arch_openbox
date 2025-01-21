@@ -8,7 +8,7 @@ if [ "$EUID" -eq 0 ]; then
 fi
 
 # install something
-sudo pacman -Syu --needed --noconfirm nano git base-devel jq i3-gaps xorg-server xorg-xinit pcmanfm-gtk3 lxappearance alacritty xdotool kvantum kvantum-theme-materia materia-gtk-theme kvantum-qt5 qt5ct qt6ct libnotify
+sudo pacman -Syu --needed --noconfirm nano git base-devel jq network-manager-applet i3-gaps xorg-server xorg-xinit pcmanfm-gtk3 lxappearance alacritty xdotool kvantum kvantum-theme-materia materia-gtk-theme kvantum-qt5 qt5ct qt6ct libnotify
 
 # for tui greeter
 sudo pacman -Syu --needed --noconfirm greetd-tuigreet
