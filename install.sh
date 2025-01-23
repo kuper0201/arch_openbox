@@ -54,3 +54,25 @@ sudo systemctl enable NetworkManager
 
 # set gtk3 theme
 # lxappearance
+
+read -p "install hangul? [Y/n]: " response
+
+response=${response:-y}
+
+if [[ "${response,,}" == "y" ]]; then
+    echo "Installing hangul..."
+    ./install_hangul.sh
+else
+    echo "Skipping hangul installation."
+fi
+
+read -p "install rvnc? [Y/n]: " response
+
+response=${response:-y}
+
+if [[ "${response,,}" == "y" ]]; then
+    echo "Installing rvnc..."
+    ./install_rvnc.sh
+else
+    echo "Skipping rvnc installation."
+fi
