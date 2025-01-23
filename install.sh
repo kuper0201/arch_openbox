@@ -11,13 +11,13 @@ fi
 sudo pacman -Syu --needed --noconfirm nano git base-devel jq network-manager-applet i3-gaps xorg-server xorg-xinit pcmanfm-gtk3 lxappearance alacritty xdotool kvantum kvantum-theme-materia materia-gtk-theme kvantum-qt5 qt5ct qt6ct libnotify
 
 # for tui greeter
-sudo pacman -Syu --needed --noconfirm greetd-tuigreet
-sudo sed -i 's|command = "agreety --cmd /bin/sh"|command = "tuigreet --cmd /bin/bash"|' /etc/greetd/config.toml
-sudo systemctl enable greetd
+#sudo pacman -Syu --needed --noconfirm greetd-tuigreet
+#sudo sed -i 's|command = "agreety --cmd /bin/sh"|command = "tuigreet --cmd /bin/bash"|' /etc/greetd/config.toml
+#sudo systemctl enable greetd
 
 # for gui greeter
-#sudo pacman -Syu --needed --noconfirm lightdm lightdm-gtk-greeter
-#sudo systemctl enable lightdm
+sudo pacman -Syu --needed --noconfirm lightdm lightdm-gtk-greeter
+sudo systemctl enable lightdm
 
 # install yay
 git clone https://aur.archlinux.org/yay.git
