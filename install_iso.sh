@@ -8,7 +8,7 @@ pacman -Syu --needed --noconfirm lightdm lightdm-gtk-greeter
 systemctl enable lightdm
 
 # install packages from AUR
-yay -Syu --needed --noconfirm polybar rofi dunst compton feh ttf-hack-nerd
+yay -Syu --needed --noconfirm polybar rofi dunst compton feh ttf-hack-nerd ttf-nanum
 
 # install keybinds and themes
 mv dot_bashrc /etc/skel/.bashrc
@@ -20,5 +20,6 @@ mv dot_config /etc/skel/.config
 mv dot_themes /etc/skel/.themes
 
 sed -i "$ s/$/\nQT_QPA_PLATFORMTHEME=qt5ct\nQT_STYLE_OVERRIDE=kvantum\nGTK_THEME=Materia-dark/" /etc/environment
+sed -i "$ s/$/\nGTK_IM_MODULE=fcitx\nQT_IM_MODULE=fcitx\nXMODIFIERS=@im=fcitx/" /etc/environment
 
-./install_hangul.sh
+pacman -Syu --needed --noconfirm fcitx5 fcitx5-im fcitx5-hangul fcitx5-configtool fcitx5-qt fcitx5-gtk
