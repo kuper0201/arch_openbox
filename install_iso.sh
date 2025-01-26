@@ -16,9 +16,9 @@ mv dot_xinitrc /etc/skel/.xinitrc
 mv dot_Xresources /etc/skel/.Xresources
 mv scripts /etc/skel/scripts
 
-mv dot_config /etc/.config
-mv dot_themes /etc/.themes
+mv dot_config /etc/skel/.config
+mv dot_themes /etc/skel/.themes
 
-sudo sed -i "$ s/$/\nQT_QPA_PLATFORMTHEME=qt5ct\nQT_STYLE_OVERRIDE=kvantum\nGTK_THEME=Materia-dark/" /etc/environment
+sed -i "$ s/$/\nQT_QPA_PLATFORMTHEME=qt5ct\nQT_STYLE_OVERRIDE=kvantum\nGTK_THEME=Materia-dark/" /etc/environment
 
 ./install_hangul.sh
