@@ -27,7 +27,7 @@ cd ..
 rm -rf yay
 
 # install packages from AUR
-yay -Syu polybar rofi dunst compton feh ttf-hack-nerd --needed --noconfirm
+yay -Syu --needed --noconfirm polybar rofi dunst compton feh ttf-hack-nerd
 
 # backup
 mv ~/.bashrc ~/.bashrc_bak
