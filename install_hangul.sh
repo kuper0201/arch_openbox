@@ -4,4 +4,4 @@ sudo pacman -Syu --needed --noconfirm fcitx5 fcitx5-im fcitx5-hangul fcitx5-conf
 
 sudo sed -i "$ s/$/\nGTK_IM_MODULE=fcitx\nQT_IM_MODULE=fcitx\nXMODIFIERS=@im=fcitx/" /etc/environment
 
-yay -Syu ttf-nanum
+yay -Syu --noconfirm ttf-nanum
