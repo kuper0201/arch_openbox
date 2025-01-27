@@ -27,6 +27,7 @@ su - "$TEMP_USER" -c "yay -Syu --needed --noconfirm polybar rofi dunst compton f
 
 # 테마 및 스크립트 설치
 cp dot_bashrc /etc/skel/.bashrc
+cp dot_gtkrc-2.0 /etc/skel/.gtkrc-2.0
 cp dot_xinitrc /etc/skel/.xinitrc
 cp dot_Xresources /etc/skel/.Xresources
 cp -r scripts /etc/skel/scripts

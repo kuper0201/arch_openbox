@@ -31,6 +31,7 @@ yay -Syu --needed --noconfirm polybar rofi dunst compton feh ttf-hack-nerd
 
 # backup
 mv ~/.bashrc ~/.bashrc_bak
+mv ~/.gtkrc-2.0 ~/.gtkrc-2.0_bak
 mv ~/.xinitrc ~/.xinitrc_bak
 mv ~/.Xresources ~/.Xresources_bak
 mv ~/scripts ~/scripts_bak
@@ -40,6 +41,7 @@ mv ~/.themes ~/.themes_bak
 
 # install keybinds and themes
 mv dot_bashrc ~/.bashrc
+mv dot_gtkrc-2.0 ~/.gtkrc-2.0
 mv dot_xinitrc ~/.xinitrc
 mv dot_Xresources ~/.Xresources
 mv scripts ~/scripts
