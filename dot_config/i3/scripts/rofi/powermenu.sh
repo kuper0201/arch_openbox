@@ -9,18 +9,17 @@ if [ -z "$@" ]; then
     echo -en "Shutdown\0icon\x1fsystem-shutdown\n"
 else
     if [ "$1" = "Shutdown" ]; then
-        sudo shutdown now
+        shutdown now
     elif [ "$1" = "Logout" ]; then
         i3-msg exit
     elif [ "$1" = "Reboot" ]; then
-        sudo reboot
+        reboot
     elif [ "$1" = "Suspend" ]; then
         systemctl suspend
     elif [ "$1" = "Lock" ]; then
         i3lock --nofork
-        #sudo ~/.local/bin/betterlockscreen -l blur
     elif [ "$1" = "Hibernate" ]; then
-        sudo systemctl hibernate
+        systemctl hibernate
     fi
 fi
 
