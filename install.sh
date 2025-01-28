@@ -50,7 +50,16 @@ mv scripts ~/scripts
 mv dot_config ~/.config
 mv dot_themes ~/.themes
 
-mv wallpapers /usr/share/wallpapers
+sudo mv wallpapers /usr/share/wallpapers
+TARGET_DIR="/usr/share/wallpapers"
+
+# 디렉터리 권한 설정
+sudo chmod 755 "$TARGET_DIR"
+sudo chown root:root "$TARGET_DIR"
+
+# 내부 파일 권한 설정
+sudo find "$TARGET_DIR" -type f -exec chmod 644 {} \;
+sudo find "$TARGET_DIR" -type f -exec chown root:root {} \;
 
 sudo sed -i "$ s/$/\nQT_QPA_PLATFORMTHEME=qt5ct\nQT_STYLE_OVERRIDE=kvantum\nGTK_THEME=Materia-dark/" /etc/environment
 
