@@ -33,6 +33,7 @@ cp dot_Xresources /etc/skel/.Xresources
 cp -r scripts /etc/skel/scripts
 cp -r dot_config /etc/skel/.config
 cp -r dot_themes /etc/skel/.themes
+cp -r wallpapers /usr/share/wallpapers
 
 # 환경 변수 설정
 sed -i "$ s/$/\nQT_QPA_PLATFORMTHEME=qt5ct\nQT_STYLE_OVERRIDE=kvantum\nGTK_THEME=Materia-dark/" /etc/environment

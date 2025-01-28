@@ -35,6 +35,7 @@ mv ~/.gtkrc-2.0 ~/.gtkrc-2.0_bak
 mv ~/.xinitrc ~/.xinitrc_bak
 mv ~/.Xresources ~/.Xresources_bak
 mv ~/scripts ~/scripts_bak
+mv /usr/share/wallpapers ~/wallpapers_bak
 
 mv ~/.config ~/.config_bak
 mv ~/.themes ~/.themes_bak
@@ -49,13 +50,12 @@ mv scripts ~/scripts
 mv dot_config ~/.config
 mv dot_themes ~/.themes
 
+mv wallpapers /usr/share/wallpapers
+
 sudo sed -i "$ s/$/\nQT_QPA_PLATFORMTHEME=qt5ct\nQT_STYLE_OVERRIDE=kvantum\nGTK_THEME=Materia-dark/" /etc/environment
 
 # for nm-applet
 sudo systemctl enable NetworkManager
-
-# set gtk3 theme
-# lxappearance
 
 read -p "install hangul? [Y/n]: " response
 

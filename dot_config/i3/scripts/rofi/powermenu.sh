@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 if [ -z "$@" ]; then
     echo -en "Suspend\0icon\x1fsystem-suspend\n"
     echo -en "Lock\0icon\x1fsystem-lock-screen\n"
