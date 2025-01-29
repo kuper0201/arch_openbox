@@ -30,6 +30,7 @@ cp dot_bashrc /etc/skel/.bashrc
 cp dot_gtkrc-2.0 /etc/skel/.gtkrc-2.0
 cp dot_xinitrc /etc/skel/.xinitrc
 cp dot_Xresources /etc/skel/.Xresources
+cp 40-libinput.conf /etc/X11/xorg.conf.d/40-libinput.conf
 cp -r scripts /etc/skel/scripts
 cp -r dot_config /etc/skel/.config
 cp -r dot_themes /etc/skel/.themes
