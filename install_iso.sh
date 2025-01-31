@@ -23,7 +23,7 @@ su - "$TEMP_USER" -c "git clone https://aur.archlinux.org/yay.git $TEMP_HOME/yay
 su - "$TEMP_USER" -c "cd $TEMP_HOME/yay && makepkg -si --noconfirm"
 
 # AUR 패키지 설치
-su - "$TEMP_USER" -c "yay -Syu --needed --noconfirm broadcom-wl-dkms polybar rofi dunst compton feh ttf-hack-nerd ttf-nanum"
+su - "$TEMP_USER" -c "yay -Syu --needed --noconfirm broadcom-wl-dkms polybar rofi dunst compton feh ttf-nanum"
 
 # 테마 및 스크립트 설치
 cp dot_bashrc /etc/skel/.bashrc
