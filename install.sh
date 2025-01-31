@@ -50,6 +50,9 @@ mv scripts ~/scripts
 mv dot_config ~/.config
 mv dot_themes ~/.themes
 
+mkdir -p ~/.local/share
+mv fonts ~/.local/share/fonts
+
 sudo mv wallpapers /usr/share/wallpapers
 TARGET_DIR="/usr/share/wallpapers"
 
