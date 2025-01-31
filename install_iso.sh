@@ -36,7 +36,7 @@ cp -r dot_config /etc/skel/.config
 cp -r dot_themes /etc/skel/.themes
 cp -r wallpapers /usr/share/wallpapers
 
-mkdir -p /etc/skel/.local/share/fonts
+mkdir -p /etc/skel/.local/share
 cp -r fonts /etc/skel/.local/share/fonts
 
 TARGET_DIR="/usr/share/wallpapers"
