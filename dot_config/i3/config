@@ -182,6 +182,6 @@ exec --no-startup-id touchegg
 default_border pixel 2
 
 #border colors
-client.focused #006400 #006400 #006400 #006400 #006400
+client.focused #006400 #006400 #F8F8F2 #006400 #006400
 client.focused_inactive #343746 #343746 #F8F8F2 #21222C #21222C
 client.unfocused #343746 #343746 #F8F8F2 #21222C #21222C
