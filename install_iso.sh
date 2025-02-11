@@ -6,6 +6,7 @@ cp dot_Xresources /etc/skel/.Xresources
 cp -r dot_config /etc/skel/.config
 cp -r dot_themes /etc/skel/.themes
 cp -r wallpapers /usr/share/wallpapers
+cp -r icon_svg /usr/share/icon_svg
 
 TARGET_DIR="/usr/share/wallpapers"
 
