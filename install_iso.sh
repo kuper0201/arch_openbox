@@ -12,7 +12,7 @@ echo "$TEMP_USER ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 su - "$TEMP_USER" -c "mkdir -p $TEMP_HOME/scripts"
 
 # 필요한 패키지 설치 (루트 권한 필요)
-pacman -Syu --needed --noconfirm nano git base-devel jq network-manager-applet i3-gaps xorg-server xorg-xinit pcmanfm-gtk3 lxappearance alacritty xdotool kvantum kvantum-theme-materia materia-gtk-theme kvantum-qt5 qt5ct qt6ct libnotify
+pacman -Syu --needed --noconfirm nano git base-devel xterm network-manager-applet openbox lxqt-panel pcmanfm-gtk3 lxappearance alacritty xdotool kvantum kvantum-theme-materia materia-gtk-theme kvantum-qt5 qt5ct qt6ct
 
 # GUI 로그인 관리자 설치 및 활성화
 pacman -Syu --needed --noconfirm lightdm lightdm-gtk-greeter
@@ -23,21 +23,15 @@ su - "$TEMP_USER" -c "git clone https://aur.archlinux.org/yay.git $TEMP_HOME/yay
 su - "$TEMP_USER" -c "cd $TEMP_HOME/yay && makepkg -si --noconfirm"
 
 # AUR 패키지 설치
-su - "$TEMP_USER" -c "yay -Syu --needed --noconfirm broadcom-wl-dkms polybar rofi dunst compton feh ttf-nanum"
+su - "$TEMP_USER" -c "yay -Syu --needed --noconfirm feh ttf-nanum realvnc-vnc-server"
+systemctl enable vncserver-x11-serviced
 
 # 테마 및 스크립트 설치
-cp dot_bashrc /etc/skel/.bashrc
 cp dot_gtkrc-2.0 /etc/skel/.gtkrc-2.0
-cp dot_xinitrc /etc/skel/.xinitrc
 cp dot_Xresources /etc/skel/.Xresources
-cp 40-libinput.conf /etc/X11/xorg.conf.d/40-libinput.conf
-cp -r scripts /etc/skel/scripts
 cp -r dot_config /etc/skel/.config
 cp -r dot_themes /etc/skel/.themes
 cp -r wallpapers /usr/share/wallpapers
-
-mkdir -p /etc/skel/.local/share
-cp -r fonts /etc/skel/.local/share/fonts
 
 TARGET_DIR="/usr/share/wallpapers"
 
