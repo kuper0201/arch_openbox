@@ -69,6 +69,18 @@
       <prompt>yes</prompt>
     </action>
   </item>
+  <item label="Power Off">
+    <action name="Execute">
+      <prompt>Power off?</prompt>
+      <command>poweroff</command>
+    </action>
+  </item>
+  <item label="Reboot">
+    <action name="Execute">
+      <prompt>Reboot?</prompt>
+      <command>reboot</command>
+    </action>
+  </item>
 </menu>
 
 </openbox_menu>
