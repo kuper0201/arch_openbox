@@ -21,9 +21,7 @@ find "$TARGET_DIR" -type f -exec chown root:root {} \;
 # 환경 변수 설정
 sed -i "$ s/$/\nQT_QPA_PLATFORMTHEME=qt5ct\nQT_STYLE_OVERRIDE=kvantum\nGTK_THEME=Materia-dark/" /etc/environment
 sed -i "$ s/$/\nGTK_IM_MODULE=fcitx\nQT_IM_MODULE=fcitx\nXMODIFIERS=@im=fcitx/" /etc/environment
-sed -i "$ s/$/\nPATH=\/opt\/miniconda3\/bin/" /etc/environment
-sed -i "$ s/$/\nCRYPTOGRAPHY_OPENSSL_NO_LEGACY=1/" /etc/environment
-sed -i "$ s/$/\nTERMINFO=\/usr\/share\/terminfo/" /etc/environment
+sed -i "$ s/$/\nMAMBA_ROOT_PREFIX=/opt/micromamba/" /etc/environment
 
 # lightdm 배경화면 설정
 sed -i 's|^#background.*|background=/usr/share/wallpapers/wall_1.png|' /etc/lightdm/lightdm-gtk-greeter.conf
